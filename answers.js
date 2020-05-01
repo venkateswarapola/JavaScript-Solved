@@ -1,7 +1,7 @@
 
 const hello = () => {//Hello world task 1.1
     alert("Iam JavaScript");
-}
+};
 
 const variable = () => {
     //Working with vaiables
@@ -21,13 +21,13 @@ const variable = () => {
     BIRTHDAY in caps  --hardcoded.
     age in small  --runtime evaluation.
     */
-}
+};
 
 const datatypes = () => {
     alert("answer 1 Hello");
     alert("answer 1 Hello name");
     alert("answer 1 Hello Ilya");
-}
+};
 
 const operators = () => {
     //The post fix and prefix forms
@@ -53,7 +53,7 @@ const operators = () => {
     null + 1            //1
     undefined + 1       //NaN
     " \t \n" - 2        //-2 
-}
+};
 
 const comparisons = () => {
     5 > 4                      //true
@@ -63,12 +63,12 @@ const comparisons = () => {
     undefined === null         //false
     null == "\n0\n"            //false
     null === +"\n0\n"          //false
-}
+};
 
 const interaction = () => {
     let name = prompt("Whats your name?");
     alert(`You have entered ${name}`);
-}
+};
 
 const conditional = () => {
     //if( a string  with zero)
@@ -102,7 +102,7 @@ const conditional = () => {
         (login == 'Director') ? 'Greeting' :
             (login == '') ? 'No login' : ' ';
 
-}
+};
 
 const logicalops = () => {
     //1.Whats the result of OR
@@ -138,7 +138,7 @@ const logicalops = () => {
 
     //8.A question about if
     //  First and Third are alerted.
-}
+};
 
 const checkTheLogin = () => {
     let username = prompt("Whats your username");
@@ -160,7 +160,7 @@ const checkTheLogin = () => {
     else {
         alert("I dont know");
     }
-}
+};
 
 
 const looping = () => {
@@ -206,7 +206,7 @@ const looping = () => {
             alert(i);
         }
     }
-}
+};
 
 const switchCase = () => {
     //1.Rewrite the switch into an if
@@ -230,4 +230,8 @@ const switchCase = () => {
             alert("2,3");
             break;
     }
-}
+};
+
+
+
+
