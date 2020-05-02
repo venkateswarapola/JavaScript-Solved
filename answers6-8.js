@@ -137,3 +137,35 @@ askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
 
 //4. Partial application for login
 askPassword(user.login.bind(user, true), user.login.bind(user, false));
+
+
+//8.Prototypes and Inheritence
+
+//8.2 F.prototype
+//1.Changing "prototype"
+//ANS 1.true , 2.true , 3.true , 4.undefined
+
+//2. Create an object with the same constructor
+function obj(value) {
+    this.value = value;
+  }
+
+//8.3 Native prototypes
+
+//1. Add method "f.defer(ms)" to functions
+Function.prototype.defer = function (ms) {
+    setTimeout(this, ms);
+};
+
+//8.4 
+//1.Add toString to the dictionary
+let dictionary = Object.create(null, {
+    toString: {
+        value() {
+            return Object.keys(this).join();
+        }
+    }
+});
+
+//2.The difference between calls
+// ANS 1.Rabbit 2,3,4. Undefined
