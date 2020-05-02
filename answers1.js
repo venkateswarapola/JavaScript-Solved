@@ -375,9 +375,6 @@ const prototypes = () => {
 const objectMethods = () => {
     //1.Syntax check?
     //undefined
-
-    //2.Explain the value of this
-    //
 }
 
 const constructors = () => {
