@@ -232,6 +232,183 @@ const switchCase = () => {
     }
 };
 
+const functionTask = () => {
+    //1.Is else required?
+    // In the given example "NO" but not always
 
+    //2.Rewrite the function using ? or ||
+    //Varient 1
+    function checkAge(age) {
+        return (age > 18) ? true : confirm('Did parents allow you?');
+    }
+    //Varient 2
+    function checkAge1(age) {
+        return (age > 18) || confirm('Did parents allow you?');
+    }
+
+
+    //3.function min(a,b)
+    function min(a, b) {
+        return a < b ? a : b
+    }
+
+    //4.function pow(x,n)
+    let x = prompt("x value?");
+    let n = prompt("n value?");
+    function pow(x, n) {
+        if (n >= 1) {
+            alert(Math.pow(x, n));
+        }
+        else {
+            alert("Not supported");
+        }
+    }
+    pow(x, n);
+};
+
+
+const arrowFunction = () => {
+    //Rewrite the arrow function
+    const ask = (question, yes, no) => {
+        if (confirm(question)) yes()
+        else no();
+    }
+    ask("Do you agree?",
+        () => alert("You agreed."),
+        () => alert("You canceled the execution.")
+    );
+};
+
+
+const codingStyle = () => {
+    //1.BadStyle
+    let x = prompt("x?", "");
+    let n = prompt("n?", "");
+    if (n < 0) {
+        alert(`Power ${n} is not supported,
+          please enter an integer number greater than zero`);
+    } else {
+        alert(pow(x, n));
+    }
+    const pow = (x, n) => {
+        let result = 1;
+        for (let i = 0; i < n; i++) {
+            result *= x;
+        }
+        return result;
+    }
+}
+
+
+const objects = () => {
+    //1.Hello Object
+    let user = {};
+    user.name = "John";
+    user.surname = "Smith";
+    user.name = "Pete";
+    delete user.name;
+
+    //2.Check Emptiness
+    const isEmpty = (object) => {
+        for (let codes in object) {
+            return false;
+        }
+        return true;
+    }
+
+    //3.Constant objects?
+    //We can assign any value to the constant object keys but cannot assign values to objects directly.
+
+
+    //4.Sum object properties
+    let sum = 0;
+    for (let codes in salaries) {
+        sum = sum + salaries[codes];
+    }
+    console.log(sum);
+
+    //Multiply Numeric object by 2
+    const multiplyNumeric = (object) => {
+        for (let codes in object) {
+            if (typeof object[codes] == 'number') object[codes] = object[codes] * 2;
+        }
+    }
+}
+
+const prototypes = () => {
+    //1.Working with prototypes
+    //1.true
+    //2.null
+    //3.undefined
+
+
+    //2.Searching algorithm
+    let head = {
+        glasses: 1
+    };
+
+    let table = {
+        pen: 3,
+        _proto_: head
+    };
+
+    let bed = {
+        sheet: 1,
+        pillow: 2,
+        _proto_: table
+    };
+
+    let pockets = {
+        money: 2000,
+        _proto_: bed
+    };
+    //Maybe very less difference in speeds of accessing the values using pockets.glasses or head.glasses
+
+    //3.Where does it write?
+    // Rabit
+
+    //4.Why are both hamsters full?
+    //Can include stomach in each object lazy and speedy
+}
+
+
+const objectMethods = () => {
+    //1.Syntax check?
+    //undefined
+
+    //2.Explain the value of this
+    //
+}
+
+const constructors = () => {
+    //1.two functions-one object
+    //Yes it is possible
+    let user = {
+        name: 'John'
+    }
+    function A() { return user }
+    function B() { return user }
+
+    let a = new A;
+    let b = new B;
+
+    alert(a == b); // true
+
+
+    //2.create new contructor
+    function Caluculator() {
+        this.read = function () {
+            this.value1 = prompt("Enter value");
+            this.value2 = prompt("Enter value2");
+        };
+        this.sum = function () {
+            return this.value1 + this.value2;
+        }
+        this.mul = function () {
+            return this.value1 * this.value2;
+        }
+    }
+
+}
 
 
