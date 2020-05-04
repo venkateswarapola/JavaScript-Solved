@@ -23,21 +23,21 @@ router.post('/update/:name', async (req, res) => {
         address: req.body.address
     }
     await db.get().collection('user').updateOne(req.params, { $set: user })
-        .then((result) => { 
+        .then((result) => {
             console.log(result);
-            if(result.matchedCount != 0) res.send("Data Updated");
-            else if(result.matchedCount == 0) res.send("User not found");
+            if (result.matchedCount != 0) res.send("Data Updated");
+            else if (result.matchedCount == 0) res.send("User not found");
             else res.send('Updation failed try again');
-         })
+        })
         .catch(error => res.send(error.errmsg))
 });
 
 router.post('/delete/:name', async (req, res) => {
     const result = await db.get().collection('user').deleteOne(req.params)
-        .then(result => { 
-            if(result.deletedCount == 1) res.send("Data Deleted");
+        .then(result => {
+            if (result.deletedCount == 1) res.send("Data Deleted");
             else res.send("User not found");
-         })
+        })
         .catch(error => res.send(error.errmsg))
 })
 

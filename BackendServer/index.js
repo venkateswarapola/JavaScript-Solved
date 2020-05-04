@@ -7,11 +7,11 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use('/user',userRouter);
-app.use('/posts',postRouter);
-app.use('*', (req, res)=>{
-    res.send('404 Route not found');
-  });
+app.use('/user', userRouter);
+app.use('/posts', postRouter);
+app.use('*', (req, res) => {
+    res.send("404 Route not found");
+});
 
 db.connect();
 
