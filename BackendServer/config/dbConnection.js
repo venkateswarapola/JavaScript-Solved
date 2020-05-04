@@ -67,12 +67,13 @@ exports.connect = () => {
         }
       })
     })
-    .catch(error => console.log(error.errmsg));
+    .catch(error => console.log("DB is not running"));
 }
 
 exports.get = () => {
   if (state.db == null) {
-    console.log("DB not running")
+    console.log("DB not running");
+    return null;
   }
-  return state.db
+  else return state.db;
 }
