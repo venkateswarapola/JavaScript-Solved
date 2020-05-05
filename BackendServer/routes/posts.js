@@ -36,7 +36,6 @@ router.post('/deleteposts/:name/:postTitle', async (req, res) => {
     else {
         await db.get().collection('user').updateOne({ name: req.params.name }, { $pull: { posts: { postTitle: req.params.postTitle } } })
             .then((result) => {
-                console.log(result)
                 if (result.modifiedCount != 0) res.send("Data deleted");
                 else if (result.matchedCount == 0) res.send("User not found");
                 else if (result.modifiedCount == 0 && result.matchedCount != 0) res.send("Post not found");

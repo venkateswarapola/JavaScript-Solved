@@ -15,4 +15,4 @@ app.use('*', (req, res) => {
 
 db.connect();
 
-app.listen(3000);
+module.exports = app.listen(3000);

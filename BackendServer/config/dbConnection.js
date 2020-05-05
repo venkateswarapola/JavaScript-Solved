@@ -72,7 +72,6 @@ exports.connect = () => {
 
 exports.get = () => {
   if (state.db == null) {
-    console.log("DB not running");
     return null;
   }
   else return state.db;

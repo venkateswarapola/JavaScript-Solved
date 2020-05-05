@@ -32,7 +32,6 @@ router.post('/update/:name', async (req, res) => {
         }
         await db.get().collection('user').updateOne(req.params, { $set: user })
             .then((result) => {
-                console.log(result);
                 if (result.matchedCount != 0) res.send("Data Updated");
                 else if (result.matchedCount == 0) res.send("User not found");
                 else res.send('Updation failed try again');
